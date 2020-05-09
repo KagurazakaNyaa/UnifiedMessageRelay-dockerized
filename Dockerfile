@@ -7,4 +7,4 @@ VOLUME [ "/root/.umr" ]
 WORKDIR /root/.umr
 RUN wget https://raw.githubusercontent.com/JQ-Networks/UnifiedMessageRelay/master/config.yaml
 
-CMD [ "unified-message-relay" "run" ]
+ENTRYPOINT [ "unified-message-relay" "run" ]
