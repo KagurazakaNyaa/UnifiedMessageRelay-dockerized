@@ -7,4 +7,4 @@ VOLUME [ "/root/.umr" ]
 WORKDIR /root
 ADD start.sh start.sh
 RUN chmod +x start.sh
-ENTRYPOINT [ "/root/start.sh" ]
+CMD [ "/root/start.sh" ]
