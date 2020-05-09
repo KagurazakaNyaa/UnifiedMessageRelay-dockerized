@@ -6,4 +6,4 @@ RUN apt update && \
 VOLUME [ "/root/.umr" ]
 WORKDIR /root
 ADD start.sh start.sh
-ENTRYPOINT [ "start.sh" ]
+ENTRYPOINT [ "/root/start.sh" ]
