@@ -1,4 +1,4 @@
-version: 3
+version: '3.3'
 
 services:
     cqhttp:
@@ -15,5 +15,6 @@ services:
 
     umr:
         build: .
+        image: kagurazakanyaa/unifiedmessagerelay:latest
         volumes: 
             - './data/umr:/root/.umr'
