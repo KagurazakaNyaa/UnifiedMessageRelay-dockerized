@@ -4,7 +4,7 @@ RUN apt update && \
     apt install libcairo2 ffmpeg libmagickwand-dev wget -y
 
 VOLUME [ "/root/.umr" ]
-WORKDIR /root
-ADD start.sh start.sh
-RUN chmod +x start.sh
+
+ADD start.sh /root/start.sh
+RUN chmod +x /root/start.sh
 CMD [ "/root/start.sh" ]
