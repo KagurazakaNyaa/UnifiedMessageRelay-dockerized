@@ -1,0 +1,19 @@
+version: 3
+
+services:
+    cqhttp:
+        image: 'richardchien/cqhttp:latest'
+        volumes:
+            - './data/coolq:/home/user/coolq'
+        ports:
+            - '9000:9000' # noVNC
+            - '127.0.0.1:5700:5700' # HTTP API listen
+        environment:
+            - VNC_PASSWD=MAX8char # vnc password, maximum 8 chars 
+            - 'COOLQ_URL=https://dlsec.cqp.me/cqp-tuling' # Coolq Pro, for Air user, remove this line
+            - COOLQ_ACCOUNT=123456 # QQ Account
+
+    umr:
+        build: .
+        volumes: 
+            - './data/umr:/root/.umr'
