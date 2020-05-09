@@ -4,7 +4,6 @@ RUN apt update && \
     apt install libcairo2 ffmpeg libmagickwand-dev wget -y
 
 VOLUME [ "/root/.umr" ]
-WORKDIR /root/.umr
-RUN wget https://raw.githubusercontent.com/JQ-Networks/UnifiedMessageRelay/master/config.yaml
-
-ENTRYPOINT [ "python" "-m" "unified-message-relay" "run" ]
+WORKDIR /root
+ADD start.sh start.sh
+ENTRYPOINT [ "start.sh" ]
