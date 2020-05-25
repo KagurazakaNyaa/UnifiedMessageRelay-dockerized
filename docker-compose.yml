@@ -15,6 +15,6 @@ services:
 
     umr:
         build: .
-        image: kagurazakanyaa/unifiedmessagerelay:alpine
+        image: kagurazakanyaa/unified-message-relay:alpine
         volumes: 
             - './data/umr:/root/.umr'
