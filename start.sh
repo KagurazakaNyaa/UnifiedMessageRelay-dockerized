@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 export PATH=$PATH:$HOME/.local/bin
 if ! [ -f /root/.umr/config.yaml ]
 then
